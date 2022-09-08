@@ -1,0 +1,30 @@
+<DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UT E-8" />
+      <link rel="stylesheet" href="index.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+      <script src="script.js"></script>
+      <title>Angular App</title>
+    </head>
+    <body>
+      <div class="main" ng-app="myList" ng-controller="myListController">
+        <h1>TO DO LIST</h1>
+        <div class="addItem">
+          <input
+            placeholder="Add new task"
+            class="addText"
+            ng-model="newItem"
+          />
+          <button ng-click="pushItem()">Add</button>
+        </div>
+        <ul>
+          <li ng-repeat="i in items">
+            {{i}}
+            <span ng-click="deleteItem($index)">x</span>
+          </li>
+        </ul>
+      </div>
+    </body>
+  </html>
+</DOCTYPE>
